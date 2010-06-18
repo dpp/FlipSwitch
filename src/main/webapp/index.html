@@ -1,9 +1,38 @@
 <lift:surround with="default" at="content">
-  <h2>Welcome to your project!</h2>
-		<p>
-      <lift:helloWorld.howdy>
-        <span>Welcome to app at <b:time/></span>
-      </lift:helloWorld.howdy>
-    </p>
+  <table>
+    <tr>
+      <td>
+	<span id="UL">
+	  <lift:Quad for="UL"/>
+	</span>
+      </td>
+      <td>
+	<span id="UR">
+	  <lift:Quad for="UR"/>
+	</span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	<span id="LL">
+	  <lift:Quad for="LL"/>
+	</span>
+      </td>
+      <td>
+	<lift:comet type="Chat">
+	  <ul>
+	    <chat:line>
+	      <li><chat:msg/></li>
+	    </chat:line>
+	  </ul>
+	  <lift:form>
+	    <chat:input/>
+	    <input type="submit"
+		   value="chat"/>
+	  </lift:form>
+	</lift:comet>
+      </td>
+    </tr>
+  </table>
 </lift:surround>
 
